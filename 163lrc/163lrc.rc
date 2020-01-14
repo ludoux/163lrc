@@ -1,0 +1,36 @@
+#if defined(UNDER_CE)
+#include <winbase.h>
+#else
+#include <winver.h>
+#endif
+VS_VERSION_INFO VERSIONINFO
+    FILEVERSION 1,0,0,0
+    PRODUCTVERSION 1,0,0,0
+    FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+    FILEFLAGS VS_FF_DEBUG
+#else
+    FILEFLAGS 0x0L
+#endif
+    FILEOS VOS__WINDOWS32
+    FILETYPE VFT_DLL
+    FILESUBTYPE 0x0L
+    BEGIN
+        BLOCK "StringFileInfo"
+        BEGIN
+            BLOCK "080404b0"
+            BEGIN
+                VALUE "FileDescription", "163lrc-Qt5"
+                VALUE "FileVersion", "1.0.0.0"
+                VALUE "InternalName", "163lrc.exe"
+                VALUE "LegalCopyright", "Copyright ©2019-2020 ludoux"
+                VALUE "OriginalFilename", "163lrc.exe"
+                VALUE "ProductName", "163lrc"
+                VALUE "ProductVersion", "1.0.0.0"
+            END
+        END
+        BLOCK "VarFileInfo"
+        BEGIN
+            VALUE "Translation", 0x804, 1200
+        END
+    END
